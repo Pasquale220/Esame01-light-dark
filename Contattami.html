@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contattami</title>
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="./img/logo-titolo.ico">
+    <link rel="stylesheet" href="./css/navbar-footer.min.css">
+    <link rel="stylesheet" href="css/contatti.style.min.css">
+</head>
+<body>
+    <!---Intestazione della pagina-->
+<header>
+    <div>
+      <h1>WebForge</h1>
+      <img id="logo" src="./Img/logo-website.png" alt="Logo WebForge">
+    </div>
+
+     <!--Menù principale-->
+     <nav>
+         <ul id="nav-bar">
+             <li>
+             <a href="./Homepage.html">Home</a>
+             </li>
+             <li>
+             <a href="./Progetti.html">Progetti</a>
+             </li>
+             <li>
+                 <button onclick="window.location.href='#'">Contattami</button>
+             </li>
+         </ul>
+     </nav>
+ </header>
+ <main>
+    <!---Hero section Prgetti-->
+    <div id="hero-section">
+        <h2>Hai un Progetto in Mente? Contattami!</h2>
+    </div>
+
+    <div class="container">
+        <form action="http://www.example.com/log-in.php" method="get">
+
+            <h2>Contattaci</h2>
+
+            <div id="name">
+                <label for="input-name">Nome</label>
+                <input id="input-name" type="text" placeholder="Nome" size="25" maxlength="25" required>
+
+                <label for="input-cognome">Cognome</label>
+                <input id="input-cognome" type="text" placeholder="Cognome" size="25" maxlength="25" required>
+            </div>
+
+            <div id="email">
+                <label for="input-email">Email</label>
+                <input id="input-email" type="email" placeholder="Email" size="30" minlength="10" maxlength="40" required>
+
+                <label for="telefono">Telefono</label>
+                <input id="telefono" type="tel" placeholder="Telefono" size="20" minlength="5" maxlength="20" required>
+            </div>
+
+            <div id="scegli">
+                <label for="options">Scegli le opzioni</label>
+                <select name="options" id="options">
+                    <option value="scegliopzione">--Seleziona un opzione--</option>
+                    <option value="option1">Opzione 1</option>
+                    <option value="option2">Opzione 2</option>
+                    <option value="option3">Opzione 3</option>
+                    <option value="option4">Opzione 4</option>
+                    <option value="option5">Opzione 5</option>
+                </select>
+            </div>
+
+            <div id="oggetto">
+                <label for="input-oggetto">Oggetto</label>
+                <input id="input-oggetto" type="text" placeholder="oggetto" size="30" minlength="4" maxlength="100" required>
+            </div>
+
+            <div id="testo">
+                <textarea name="testo" id="text" minlength="10" maxlength="499"></textarea>
+            </div>
+
+            <div id="button">
+                <button>Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+ </main>
+ <footer> 
+
+    <!--Logo footer-->
+   <div id="footer-top">   
+      <div id="logo-footer">
+          <img src="./Img/logo-website.png" alt="Logo">
+      </div>
+
+      <div id="logo-text">
+          <h2>WebForge</h2>
+          <h3> Crafting Innovative Web Experiences</h3>
+  </div>
+  
+   <!-- Menù di contatti -->
+      <div id="contact-footer">
+          <ul>
+              <li><h2>Contatti:</h2></li>
+              <li>Email: <a href="mailto:info@webforge.com">info@webforge.com</a></li>
+              <li>Telefono: <a href="tel:+393512209634">+39 351 220 9634</a></li>
+          </ul>
+      </div>
+      <!-- Menù di navigazione  -->
+      <nav id="nav-footer">
+          <ul>
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="Contattami.html">Contatti</a></li>
+           </ul>
+      </nav>
+  </div>
+
+  <!-- Linea orizzontale -->
+  <hr>
+
+  <!-- Sezione inferiore del footer -->
+  <div id="footer-bottom">
+      <div id="copyright">
+          &copy; 2024 WebForge. Tutti i diritti riservati.
+      </div>
+      <div id="social-icons">
+          <a href="https://web.whatsapp.com" target="_blank"><img src="./img/logoWa.png" alt="whatsapp" id="whatsapp"></a>
+          <a href="https://facebook.com" target="_blank"><img src="./img/logoFB.png" alt="Twitter" id="Facebook"></a>
+          <a href="https://instagram.com" target="_blank"><img src="./img/logoIG.png" alt="Instagram" id="Instagram" ></a>
+      </div>
+      <div id="terms-conditions">
+          <a href="terms.html">Termini e Condizioni</a>
+      </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+body{
+    font-family: "OriginTech";
+    background-image: url('../img/background-contatti.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container{
+    display:flex ;
+    justify-content: center;
+    text-align: center;
+    align-items:center ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+
+}
+
+form{
+    width: 60%;
+    border: 2px double #626a70;
+    background-color: silver;
+   
+}
+
+.container h2{
+    display: flex;
+    justify-content:center ;
+    text-align: center;
+    color: wheat;
+    text-shadow: 1px 1px 0 #000, 2px 2px 0 #333, 3px 3px 0 #000;
+    text-decoration: solid;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#name, #email, #oggetto, #scegli, #testo, #button{
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 0;
+    font-weight: bold;
+
+}
+
+label{
+    color: #000;
+    text-shadow: 1px 1px 0 wheat, 2px 2px 0 #888888, 3px 3px 0 wheat;
+}
+
+textarea{
+    width: 70%;
+    min-height: 200px;
+}
+
+button{
+    width: 150px;
+    border-radius: 10px;
+    background-color: #06171f;
+    color: #6a747c;
+    font-family: "OriginTech";
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+input:hover{
+    background-color: #626a70;;
+    color: wheat;
+}
+
+select:hover{
+    background-color: #626a70;
+    color: wheat;
+}
+option:hover{
+    background-color: #626a70;
+}
+
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+    }
+
+    form{
+        width: 80%;
+    }
+}
+
+@media (max-width: 425px){
+    input{
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    form{
+        width: 80%;
+    }
+
+    label{
+        font-size: 11px;
+    }
+
+    .email, .oggetto{
+        max-width: 220px;
+    }
+
+    textarea{
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 375px){
+    .input-cognome, .oggetto{
+        max-width:200px ;
+    }
+
+    textarea{
+        margin-right: 20px;
+    }
+   
+}
+
+@media (max-width: 320px){
+    textarea{
+        margin-right: 20px;
+    }
+
+   
+    nav button{
+        max-width: 120px;
+    }
+        
+   
+}

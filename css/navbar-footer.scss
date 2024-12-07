@@ -1,0 +1,327 @@
+@import "Theme-navbar-footer";
+
+ // Impostare la variabile del tema (puoi cambiare 'light' con 'dark' per testare il cambio tema)
+$theme: "dark";
+
+@font-face { 
+  font-family: "OriginTech";
+  src: url(../font/OriginTech.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "OriginTech";
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  header div {
+    display: flex;
+    align-items: center;
+  }
+
+
+  header h1 {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
+  header img#logo {
+    width: 80px;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+
+  nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+  }
+
+  nav li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px 10px;
+    transition: transform 0.3s ease;
+    
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
+  }
+
+
+  nav a:hover::after{
+    transform: scaleX(1);
+
+  }
+
+ nav button{
+    border-radius: 10px;
+    font-family: "OriginTech";
+  }
+
+  nav button:hover {
+    transform: scale(1.2);
+  }
+
+  #hero-section{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #hero-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+   }
+
+  #hero-section h3{
+  align-self: center;
+  font-size: 18px;
+  }
+
+ /* footer */
+  footer {
+    padding: 20px;
+  }
+
+
+  #footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+
+  #logo-footer img {
+    width: 60px;
+    height: 60px;
+  }
+
+  #logo-text h2 {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  #logo-text h3 {
+    font-size: 12px;
+    margin: 0;
+  }
+
+
+  #contact-footer ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #contact-footer ul li {
+    margin: 5px 0;
+    font-size: 11px;
+  }
+
+ #contact-footer ul li h2 {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+
+  #nav-footer ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #nav-footer ul li {
+    margin: 5px 0;
+    
+  }
+
+  #nav-footer ul li a {
+    text-decoration: none;
+    font-size: 11px;
+  }
+
+
+  footer hr {
+    border: none;
+    margin: 20px 0;
+  }
+
+
+  #footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 10px;
+  }
+
+
+  #social-icons a img {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+  }
+
+  #terms-conditions a {
+    text-decoration: none;
+  }
+
+  @if $theme == light{
+    body{
+      background-color: $light-bg;
+    }
+    header{
+      background-color: $light-header-bg;
+    }
+    nav li a{
+      color: $light-header-text;
+    }
+
+    nav a::after{
+      background-color: $light-nav-after;
+    }
+
+    nav button{
+      background-color: $light-nav-button-bg;
+      color: $ligh-nav-button-text;
+    }
+    #hero-section{
+      color: $light-hs-text;
+      text-shadow: $light-hs-text-shadow;
+      border-color: $light-hs-text-border;
+    }
+    footer {
+      background-color: $light-footer-bg;
+      color: $light-footer-text;
+    }
+    #logo-text h2,
+    h3{
+      color: $light-footer-logo-text;
+      text-shadow: $light-footer-logotext-shadow;
+    }
+    #nav-footer ul li a{
+      color: $light-footer-link;
+    }
+    footer hr{
+      border-top: $light-footer-hr-border;
+    }
+    #terms-conditions a{
+      color: $light-footer-terms;
+    }
+   
+  }
+
+  @else if $theme == dark{
+    body{
+      background-color: $dark-bg;
+    }
+    header{
+      background-color: $dark-header-bg;
+    }
+
+    h1{
+      color:$dark-text-h1 ;
+      text-decoration: underline;
+    }
+
+    nav li a{
+      color: $dark-header-link;
+    }
+    nav a::after{
+      background-color: $dark-header-link;
+    }
+    nav button{
+      background-color:$dark-nav-button-bg ;
+      color: $dark-nav-button-text;
+    }
+    #hero-section{
+      color: $light-hs-text;
+      text-shadow: $light-hs-text-shadow;
+      border-color: $light-hs-text-border;
+    }
+    footer {
+      background-color: $dark-footer-bg;
+      color: $dark-header-link;
+    }
+    footer hr{
+      border-top: $dark-footer-hr-border;
+    }
+    #terms-conditions a{
+      color: $dark-header-link;
+    }
+
+  }
+
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+ }
+
+  nav ul {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  #footer-top, #footer-bottom {
+      flex-direction: row;
+      align-items: center;
+      text-align: center;
+  }
+  
+  #footer-top > div, #footer-bottom > div {
+      width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+  }
+
+  header h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+  }
+
+  header img#logo {
+      width: 60px; /* Ridurre la dimensione del logo */
+      height: auto;
+  }
+
+  nav button {
+      font-size: 14px;
+      padding: 5px 10px;
+  }
+}

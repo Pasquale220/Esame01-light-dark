@@ -1,0 +1,534 @@
+@import "theme-homepage";
+
+$theme: "dark";
+
+body{
+    #hero-section-presentation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 10px;
+        position: relative;
+    }
+    
+    .hero-container {
+        position: relative;
+        height: 100vh;
+        overflow: visible;
+    }
+    
+    #hero-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; 
+    }
+    
+    
+    #hero-section-presentation #image-sx,
+    #hero-section-presentation #image-dx {
+        flex: 2;
+        max-width: 25%;
+        opacity: 0.6;
+    }
+    
+    #hero-section-presentation #image-center {
+        flex: 6; 
+        max-width: 100%;
+        position: relative; 
+        opacity: 0.6;
+    }
+    
+    #hero-section-presentation img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    
+    
+    #hero-section-presentation #image-center .center-button {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        z-index: 10;
+        border: none;
+        border-radius: 16px;
+        font-size: 1rem;
+        font-family: "OriginTech";
+        cursor: pointer;
+        z-index: 10;
+        transition: background-color 0.3s ease;
+        opacity: 0.8;
+    }
+    
+    #hero-section-presentation .center-button a{
+        text-decoration: none;
+    }
+    
+    
+    #aboutme {
+        margin-top: 30px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 8px;
+        width: 100%;
+    }
+    
+    #aboutme-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    #aboutme-image {
+        width: 200px; 
+        height: 200px; 
+        overflow: hidden; 
+    }
+    
+    #aboutme-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+    
+    #aboutme-text {
+        flex: 2;
+    }
+    
+    #servizi h2 {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 32px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+    #servizi h3 {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 22px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    
+    #categorie img{
+        width: 300px;
+        height: auto;
+    }
+    
+    #categorie {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px; 
+    }
+    
+      .categoria {
+        text-align: center; 
+        padding: 10px;
+        background-image: url('../img/service-background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 8px; 
+    }
+
+    
+      
+      .categoria img {
+        max-width: 100%; 
+        height: auto;
+        margin-top: 10px;
+    }
+    
+    .categoria a{
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 20px; 
+        text-align: center;
+        text-decoration: none;
+        border-radius: 10px; 
+        font-size: 16px; 
+        transition: background-color 0.3s ease; 
+    } 
+    
+    #feedback {
+        gap: 10px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    #logo-clienti img {
+        width: 50px;
+        height: auto;
+    }
+    
+    #feedback h2 {
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px ;
+        font-size: 24px;
+    }
+    
+    
+    #valutazione {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 30px;
+        padding: 0 10px; 
+        overflow-y: auto;
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        box-sizing: border-box;
+    }
+    
+    
+    #valutazione div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    
+    
+    #valutazione img {
+        width: 200px;
+        height: auto;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    @if $theme == light{
+        body{
+            background-color: $light-html-bg;
+        }
+        #hero-section-presentation #image-center .center-button{
+            background-color: $light-hs-button-bg;
+        }
+        #hero-section-presentation #image-center .center-button:hover{
+            background-color: $light-hs-buttonhover-bg;
+        }
+        #hero-section-presentation .center-button a{
+            color: $light-hs-button-color;
+        }
+        #aboutme{
+            background-color: $light-aboutme-bg;
+            border: $light-aboutme-border;
+        }
+        #servizi h2,
+        h3 {
+            color: $light-servizi-h-color;
+            text-shadow: $light-servizi-h-shadow;
+            border-color: $light-servizi-h-border;
+        }
+        .categoria{
+            border: $light-categoria-border;
+            box-shadow: $light-categoria-boxshadow;
+        }
+        .categoria a{
+            background-color: $light-categoria-link-bg;
+            color: $light-categoria-link-color;
+        }
+        .categoria a:hover{
+            background-color: $light-categoria-link-hover-bg;
+            color: $light-categoria-link-hover-color;
+        }
+        #feedback h2{
+            color: $light-feedback-h2-color;
+            text-shadow: $light-feedback-h2-shadow;
+        }
+        #valutazione{
+            border: $lighr-valutazione-border;
+            background-color: $lighr-valutazione-bg;
+        }
+        #valutazione div{
+            border-bottom: $light-valutazione-border-bottom;
+        }
+
+    }
+
+    @else if $theme == dark{
+        body{
+            background-color: $dark-html-bg;
+        }
+        #hero-section-presentation #image-center .center-button{
+            background-color: $dark-hs-button-bg;
+            color: $dark-hs-button-color;
+        }
+        #hero-section-presentation #image-center .center-button:hover{
+            background-color: $dark-hs-buttonhover-bg;
+            color: $dark-hs-buttonhover-color;
+        }
+        #hero-section-presentation .center-button a{
+            color: $dark-hs-button-color;
+        }
+        #aboutme{
+            background-color: $dark-aboutme-bg;
+            border: $dark-aboutme-border;
+        }
+        #aboutme h2{
+            color: $dark-hs-button-bg;
+        }
+        #aboutme-text{
+            color: $dark-hs-button-bg;
+        }
+        #servizi{
+            background-color: $dark-aboutme-bg;
+        }
+        #servizi h2,
+        #servizi h3 {
+            color: $dark-servizi-h-color;
+            text-shadow: $dark-servizi-h-shadow;
+            border-color: $dark-servizi-h-border;
+        }
+        #categorie{
+            background-color: $dark-aboutme-bg;
+        }
+        .categoria{
+            border: $dark-categoria-border;
+            box-shadow: $dark-categoria-boxshadow;
+        }
+        .categoria a{
+            background-color: $dark-categoria-link-bg;
+            color: $dark-categoria-link-color;
+        }
+        .categoria a:hover{
+            background-color: $dark-categoria-link-hover-bg;
+            color: $dark-categoria-link-hover-color;
+        }
+        #feedback h2{
+            color: $dark-feedback-h2-color;
+            text-shadow: $light-feedback-h2-shadow;
+        }
+        #valutazione{
+            border: $dark-valutazione-border;
+            background-color: $dark-valutazione-bg;
+            color: $dark-hs-button-bg;
+        }
+        #valutazione div{
+            border-bottom: $dark-valutazione-border-bottom;
+        }
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    #hero-section-presentation #image-center .center-button {
+        position: static; /* Rimuovi il posizionamento assoluto */
+        margin-top: -20px; /* Aumenta la distanza dal margine superiore */
+        transform: none; /* Disabilita la trasformazione */
+        display: block;
+        text-align: center; /* Centra il pulsante */
+        width: fit-content; /* Adatta la larghezza al contenuto */
+        margin-left: auto; /* Centra orizzontalmente */
+        margin-right: auto;
+    }
+
+    #hero-section-presentation img {
+        max-width: 100%; /* Garantisci che l'immagine sia responsiva */
+        height: auto;
+    }
+}
+
+@media (max-width: 425px) {
+    .hero-container {
+        height: auto;
+        padding: 20px;
+    }
+
+    #hero-section h2,
+    #hero-section h3 {
+        font-size: 1.0em; 
+        text-align: center;
+    }
+
+    #hero-section-presentation {
+        flex-direction: column; 
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    #hero-section-presentation #image-sx,
+    #hero-section-presentation #image-dx {
+        max-width: 40%;
+    }
+
+    #hero-section-presentation #image-center {
+        max-width: 100%;
+    }
+
+    #hero-section-presentation img {
+        width: 100%;
+        height: auto;
+    }
+
+    #hero-section-presentation #image-center .center-button {
+        font-size: 0.9rem; /* Ridimensiona il bottone */
+        padding: 8px 16px;
+    }
+
+    .button {
+        text-align: center; /* Allinea il bottone al centro */
+    }
+
+    #aboutme {
+        padding: 15px;
+    }
+
+    #aboutme h2 {
+        font-size: 1.5rem;
+    }
+
+    #aboutme-content {
+        flex-direction: column; 
+        gap: 15px; 
+    }
+
+    #aboutme-image {
+        width: 150px; 
+        height: 150px;
+        margin: 0 auto; 
+    }
+
+    #aboutme-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #aboutme-text {
+        flex: 1; 
+        text-align: center;
+        font-size: 0.8rem; 
+        padding: 0 10px; 
+    }
+
+    #aboutme-text p {
+        margin: 0; 
+    }
+
+    #servizi h2,
+    #servizi h3 {
+        font-size: 1.5rem; 
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #categorie {
+        grid-template-columns: 1fr; 
+        gap: 15px; 
+    }
+
+    .categoria {
+        padding: 10px;
+        border-radius: 6px;
+        box-shadow: none; 
+    }
+
+    .categoria img {
+        width: 100%; 
+        height: auto;
+    }
+
+    .categoria a {
+        font-size: 14px; 
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+
+    #feedback h2 {
+        font-size: 1.5rem; 
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    #valutazione {
+        height: 300px; 
+        padding: 5px;
+        gap: 10px;
+        overflow-y: scroll; 
+        overflow-x: hidden; 
+        background-color: #f9f9f9; 
+    }
+
+    #valutazione div {
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 5px; 
+        padding: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        border: 1px solid #ddd; 
+    }
+
+    #valutazione img {
+        width: 150px; 
+        height: auto;
+        margin-bottom: 5px; 
+    }
+
+    #valutazione strong {
+        font-size: 1rem; 
+        margin-bottom: 5px;
+    }
+
+    #valutazione p {
+        font-size: 0.9rem; 
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 375px) {
+    #hero-section-presentation #image-center {
+        position: relative; /* Mantieni il posizionamento relativo */
+    }
+
+    #hero-section-presentation #image-center .center-button {
+        position: static; 
+        margin-top: -10px; 
+        transform: none; 
+        display: block;
+        text-align: center; 
+        width: fit-content; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+
+    #hero-section-presentation img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    .hero-container {
+        height: 100vh; /* Assicurati che l'intero contenitore riempia la viewport */
+    }
+
+    #hero-section-presentation #image-center .center-button {
+        bottom: 30px; /* Aggiungi ulteriore spazio */
+        font-size: 1.2rem; /* Aumenta la dimensione del testo */
+    }
+}

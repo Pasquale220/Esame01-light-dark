@@ -1,0 +1,185 @@
+@import "theme-contatti";
+
+$theme: "dark";
+
+body{
+    font-family: "OriginTech";
+    background-image: url('../img/background-contatti.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .container{
+        display:flex ;
+        justify-content: center;
+        text-align: center;
+        align-items:center ;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    
+    }
+    
+    form{
+        width: 60%;
+       
+    }
+    
+    .container h2{
+        display: flex;
+        justify-content:center ;
+        text-align: center;
+        text-decoration: solid;
+        font-size: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    #name, #email, #oggetto, #scegli, #testo, #button{
+        text-align: center;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        padding: 0;
+        font-weight: bold;
+    
+    }
+    
+    
+    
+    textarea{
+        width: 70%;
+        min-height: 200px;
+    }
+    
+    button{
+        width: 150px;
+        border-radius: 10px;
+        font-family: "OriginTech";
+    }
+    
+    button:hover {
+        transform: scale(1.2);
+    }
+    
+    @if $theme == light {
+        form {
+            border: $light-form-border;
+            background-color: $light-form-bg;
+        }
+        .container h2 {
+            color: $light-h2-color;
+            text-shadow: $light-h2-textshadow;
+        }
+        label {
+            color: $light-label-color;
+            text-shadow: $light-label-textshadow;
+        }
+        button {
+            background-color: $light-button-bg;
+            color: $light-button-color;
+        }
+        input:hover {
+            background-color: $light-input-hoover-bg;
+            color: $light-input-hoover-color;
+        }
+
+        select:hover {
+            background-color: $light-select-hoover-bg;
+            color: $light-select-hoover-color;
+        }
+        option:hover {
+            background-color: $option-hover-bg;
+        }
+    }
+
+    @else if $theme == dark {
+        form {
+            border: $dark-form-border;
+            background-color: $dark-form-bg;
+        }
+        .container h2 {
+            color: $dark-h2-color;
+            text-shadow: $dark-h2-textshadow;
+        }
+        label {
+            color: $dark-label-color;
+            text-shadow: $dark-label-textshadow;
+        }
+        button {
+            background-color: $dark-button-bg;
+            color: $dark-button-color;
+        }
+        input:hover {
+            background-color: $dark-input-hoover-bg;  // Modifica il colore di hover per tema dark
+            color: $dark-input-hoover-color;
+        }
+
+        select:hover {
+            background-color: $dark-select-hoover-bg;  // Modifica il colore di hover per select
+            color: $dark-select-hoover-color;
+        }
+        option:hover {
+            background-color: $dark-option-hover-bg;
+        }
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+    }
+
+    form{
+        width: 80%;
+    }
+}
+
+@media (max-width: 425px){
+    input{
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    form{
+        width: 80%;
+    }
+
+    label{
+        font-size: 11px;
+    }
+
+    .email, .oggetto{
+        max-width: 220px;
+    }
+
+    textarea{
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 375px){
+    .input-cognome, .oggetto{
+        max-width:200px ;
+    }
+
+    textarea{
+        margin-right: 20px;
+    }
+   
+}
+
+@media (max-width: 320px){
+    textarea{
+        margin-right: 20px;
+    }
+
+   
+    nav button{
+        max-width: 120px;
+    }
+        
+   
+}

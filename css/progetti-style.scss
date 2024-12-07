@@ -1,0 +1,209 @@
+@import "theme-progetti";
+
+$theme:"dark";
+
+body{
+    background-image: url('../img/project-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.selezione-rapida{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.selezione-rapida p{
+    margin-right: 10px;
+}
+
+
+.hr-header{
+    margin-bottom: 20px;
+    width: 80%;          
+    margin: 20px auto;
+}
+
+body h2:not(footer h2){
+    font-size: 1.8em;
+    margin: 15px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;      
+    gap: 20px;            
+    justify-content: flex-start; 
+    margin-bottom: 20px;
+}
+
+.projects-container p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.project {
+    width: calc(50% - 20px);  
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.project img {
+    width: 100%;  
+    height: auto;
+    border-radius: 8px;
+}
+
+.button {
+    display: inline-block; 
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+}
+
+@if $theme == light{
+    .selezione-rapida p{
+        color: $light-selezione-p-color;
+        text-shadow: $light-selezione-p-shadow;
+        border-color: $light-selezione-p-border;
+    }
+    
+    select:hover{
+        background-color: $light-select-hover-bg;
+        color: $light-select-hover-color;
+        border-color: $light-select-hover-border;
+    }
+    
+    .hr-header{
+        border: $light-hr-border;
+    }
+    
+    body h2:not(footer h2){
+        color: $light-h2-color;
+        text-shadow: $light-h2-shadow;
+        border-color: $light-h2-border;
+    }
+    .project { 
+        border: $light-project-border;
+        background-color: $light-project-bg;
+        color: $light-project-color;
+        box-shadow: $light-project-boxshadow;
+    }
+    .button {
+
+        background-color: $light-button-bg; 
+        color: $light-button-color; 
+    }
+    
+    .button:hover {
+        background-color: $light-button-hover-bg; 
+        color: $light-button-hover-color;
+    }
+    
+}
+
+@else if $theme == dark{
+    .selezione-rapida p{
+        color: $dark-selezione-p-color;
+        text-shadow: $dark-selezione-p-shadow;
+        border-color: $dark-selezione-p-border;
+    }
+    
+    select:hover{
+        background-color: $dark-select-hover-bg;
+        color: $dark-select-hover-color;
+        border-color: $dark-select-hover-border;
+    }
+    
+    .hr-header{
+        border: $dark-hr-border;
+    }
+    
+    body h2:not(footer h2){
+        color: $dark-h2-color;
+        text-shadow: $dark-h2-shadow;
+        border-color: $dark-h2-border;
+    }
+    .project { 
+        border: $dark-project-border;
+        background-color: $dark-project-bg;
+        color: $dark-project-color;
+        box-shadow: $dark-project-boxshadow;
+    }
+    .button {
+
+        background-color: $dark-button-bg; 
+        color: $dark-button-color; 
+    }
+    
+    .button:hover {
+        background-color: $dark-button-hover-bg; 
+        color: $dark-button-hover-color;
+    } 
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: calc(30% - 20px);
+    }
+
+    .selezione-rapida p{
+        font-size: 12px;
+    }   
+    
+}
+
+@media (max-width: 425px){
+    .project {
+        width: calc(30% - 10px);
+        
+    }
+
+    .button{
+        display: flex;
+        font-size: 9px;
+    }
+
+    .projects-container p{
+        font-size: 10px;
+    }
+
+    .project img{
+        align-self: center;
+        width: 100px;
+    }
+
+    
+    
+}
+
+@media (max-width: 375px){
+    .project img{
+        margin-left: -10px;
+    }
+}
+
+@media (max-width: 320px){
+    .project {
+        width: calc(40% - 20px);
+        
+    }
+    
+
+    .projects-container p{
+        font-size: 8px;
+    }
+
+    .button{
+        width: 100px;
+        margin-left: -7px;
+        font-size: 7px;
+    }
+}
